@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Customizable Word Blocker",
+    "version": "1.0",
+    "description": "Blocks user-defined words on web pages",
+    "permissions": ["activeTab", "storage"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["styles.css"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
